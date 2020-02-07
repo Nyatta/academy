@@ -1,48 +1,58 @@
 package homeworks.multipl_table_2;
-
-import java.util.Random;
+import java.util.Scanner;
 
 public class MultiplicationTableMain {
     public static void main(String[] args) {
 
+        //multiplication table
         int startNumber = 2;
-        int arrLenght = 7;
+        int arrLenght = 9;
 
         int[] arrayNumbers = new int[arrLenght];
 
         for (int i = 0; i < arrayNumbers.length; i++) {
             arrayNumbers[i] = startNumber++;
-//            System.out.println(arrayNumbers[i]);
         }
 
         int half = arrayNumbers.length / 2;
 
         for (int i = half; i < arrayNumbers.length; i++) {
             double mod = arrayNumbers.length / half;
-            if ( mod >= 2 ){
+            if ( mod > 2 ){
                 mod = arrayNumbers.length / ++half;
             } else {
                 break;
             }
         }
-        System.out.println("half - " + half);
 
-        for (int i = 0; i < half; i++) {
-            for (int j = 0; j < arrayNumbers.length; j++) {
-                //String res =
-                System.out.println(arrayNumbers[i] + " * " + arrayNumbers[j] + " = " + arrayNumbers[i] * arrayNumbers[j]);
+        for (int i = 0; i < arrayNumbers.length; i++) {
+            for (int j = 0; j <= half; j++) {
+                System.out.print(arrayNumbers[j] + " * " + arrayNumbers[i] + " = " + arrayNumbers[j] * arrayNumbers[i] + "\t\t");
             }
-            System.out.println("");
+            System.out.print("\n");
+        }
+        System.out.println("");
+        for (int i = 0; i < arrayNumbers.length; i++) {
+            for (int j = half + 1; j < arrayNumbers.length; j++) {
+                System.out.print(arrayNumbers[j] + " * " + arrayNumbers[i] + " = " + arrayNumbers[j] * arrayNumbers[i] + "\t\t");
+            }
+            System.out.print("\n");
         }
 
-        for (int i = half; i < arrayNumbers.length; i++) {
-            for (int j = 0; j < arrayNumbers.length; j++) {
-                System.out.println(arrayNumbers[i] + " * " + arrayNumbers[j] + " = " + arrayNumbers[i] * arrayNumbers[j]);
-            }
-            System.out.println("");
+        //cycle
+
+        Scanner in = new Scanner(System.in);
+        System.out.print("Input array lenght: ");
+        int arrayLenghtConsole = in.nextInt();
+        int[] arrayConsole = new int[arrayLenghtConsole];
+        for (int i = 0; i < arrayLenghtConsole; i++) {
+            System.out.print("Array [" + i + "] => ");
+            arrayConsole[i] = in.nextInt();
         }
 
+        //System.out.println(arrayLenghtConsole);
 
+        in.close();
 
     }
 }
