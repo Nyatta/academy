@@ -6,7 +6,7 @@ public class MultiplicationTableMain {
 
         //multiplication table
         int startNumber = 2;
-        int arrLenght = 9;
+        int arrLenght = 8;
 
         int[] arrayNumbers = new int[arrLenght];
 
@@ -16,29 +16,30 @@ public class MultiplicationTableMain {
 
         int half = arrayNumbers.length / 2;
 
-        for (int i = half; i < arrayNumbers.length; i++) {
-            double mod = arrayNumbers.length / half;
-            if ( mod > 2 ){
-                mod = arrayNumbers.length / ++half;
-            } else {
-                break;
-            }
-        }
+//        for (int i = half; i < arrayNumbers.length; i++) {
+//            double mod = arrayNumbers.length / half;
+//            System.out.println(mod);
+//            if ( mod > 2 ){
+//                mod = arrayNumbers.length / ++half;
+//                System.out.println(mod);
+//            } else {
+//            }
+//        }
 
         for (int i = 0; i < arrayNumbers.length; i++) {
-            for (int j = 0; j <= half; j++) {
+            for (int j = 0; j < half; j++) {
                 System.out.print(arrayNumbers[j] + " * " + arrayNumbers[i] + " = " + arrayNumbers[j] * arrayNumbers[i] + "\t\t");
             }
             System.out.print("\n");
         }
         System.out.println("");
         for (int i = 0; i < arrayNumbers.length; i++) {
-            for (int j = half + 1; j < arrayNumbers.length; j++) {
+            for (int j = half; j < arrayNumbers.length; j++) {
                 System.out.print(arrayNumbers[j] + " * " + arrayNumbers[i] + " = " + arrayNumbers[j] * arrayNumbers[i] + "\t\t");
             }
             System.out.print("\n");
         }
-        System.out.println();
+        System.out.println("");
 
         //cycle
         System.out.println("2.1 cycle");
@@ -51,7 +52,7 @@ public class MultiplicationTableMain {
             arrayConsole[i] = in.nextInt();
         }
         in.close();
-        System.out.println();
+        System.out.println("");
         //for
         System.out.print("for:" + "\t\t\t");
         for (int i = 0; i < arrayConsole.length; i++) {
@@ -63,7 +64,7 @@ public class MultiplicationTableMain {
         for (int i : arrayConsole) {
             System.out.print( i + "\t\t");
         }
-        System.out.println();
+        System.out.println("");
         //while
         System.out.print("while:" + "\t\t\t");
         int k= 0;
@@ -71,7 +72,7 @@ public class MultiplicationTableMain {
             System.out.print( arrayConsole[k] + "\t\t");
             k++;
         }
-        System.out.println();
+        System.out.println("");
         //do while
         System.out.print("do while:" + "\t\t");
         int t= 0;
@@ -79,7 +80,8 @@ public class MultiplicationTableMain {
             System.out.print( arrayConsole[t] + "\t\t");
             t++;
         }while ( t < arrayConsole.length);
-        System.out.println();
+        System.out.println("");
+        System.out.println("");
 
 
         //second
@@ -89,7 +91,7 @@ public class MultiplicationTableMain {
         for (int i = 1; i < arrayConsole.length; i += 2) {
             System.out.print( arrayConsole[i] + "\t\t");
         }
-        System.out.println();
+        System.out.println("");
         //foreach
         System.out.print("foreach:" + "\t\t");
         int key = 1;
@@ -99,7 +101,7 @@ public class MultiplicationTableMain {
             }
             key++;
         }
-        System.out.println();
+        System.out.println("");
         //while
         System.out.print("while:" + "\t\t\t");
         int k2 = 1;
@@ -107,7 +109,7 @@ public class MultiplicationTableMain {
             System.out.print( arrayConsole[k2] + "\t\t");
             k2 += 2;
         }
-        System.out.println();
+        System.out.println("");
         //do while
         System.out.print("do while:" + "\t\t");
         int t2 = 1;
@@ -115,6 +117,6 @@ public class MultiplicationTableMain {
             System.out.print( arrayConsole[t2] + "\t\t");
             t2 += 2;
         }while ( t2 < arrayConsole.length);
-        System.out.println();
+        System.out.println("");
     }
 }
