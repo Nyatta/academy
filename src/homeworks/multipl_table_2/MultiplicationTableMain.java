@@ -16,7 +16,8 @@ public class MultiplicationTableMain {
 
         int half = arrayNumbers.length / 2;
 
-//        for (int i = half; i < arrayNumbers.length; i++) {
+//      double half = arrayNumbers.length / 2;
+//      for (int i = half; i < arrayNumbers.length; i++) {
 //            double mod = arrayNumbers.length / half;
 //            System.out.println(mod);
 //            if ( mod > 2 ){
@@ -82,7 +83,6 @@ public class MultiplicationTableMain {
         }while ( t < arrayConsole.length);
         System.out.println("");
         System.out.println("");
-
 
         //second
         System.out.println("2.2 second");
