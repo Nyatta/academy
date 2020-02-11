@@ -1,6 +1,6 @@
 package homeworks.calc_1;
 
-public class CalculatorWithOperator {
+public class CalculatorWithOperator implements ICalculator {
 
     public double multipl(double a, double b){
         return a * b;

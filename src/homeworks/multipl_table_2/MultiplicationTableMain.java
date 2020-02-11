@@ -27,6 +27,8 @@ public class MultiplicationTableMain {
 //            }
 //        }
 
+//переделать!!! на методы и двумерный массив
+
         for (int i = 0; i < arrayNumbers.length; i++) {
             for (int j = 0; j < half; j++) {
                 System.out.print(arrayNumbers[j] + " * " + arrayNumbers[i] + " = " + arrayNumbers[j] * arrayNumbers[i] + "\t\t");

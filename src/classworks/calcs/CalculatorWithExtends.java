@@ -4,6 +4,8 @@ package homework.calcs;
 //переопределение - метод с одинаковым количеством и типами переменных
 //перегрузка - оъявление метода, но с разным количеством переменных и типов этих парааметров
 
+import classworks.calcs.CalculatorWithOperator;
+
 public class CalculatorWithExtends extends CalculatorWithOperator {
 
     /*public int plus(int a, int b){
